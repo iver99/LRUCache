@@ -1,0 +1,7 @@
+<root>
+    <cache-group>
+        <name>screenshotCache</name>
+        <capacity>6000</capacity>
+        <expiry>0</expiry>
+    </cache-group>
+</root>

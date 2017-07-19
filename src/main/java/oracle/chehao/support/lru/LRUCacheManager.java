@@ -64,7 +64,7 @@ public class LRUCacheManager extends AbstractCacheManager {
         SAXParserFactory factory = SAXParserFactory.newInstance();
         try {
             SAXParser parser = factory.newSAXParser();
-            InputStream f = LRUCacheManager.class.getClassLoader().getResourceAsStream("cache-config.xml");
+            InputStream f = LRUCacheManager.class.getClassLoader().getResourceAsStream("default-cache-config.xml");
             CacheSAXParser dh = new CacheSAXParser();
             parser.parse(f, dh);
         } catch (ParserConfigurationException e) {
