@@ -1,0 +1,25 @@
+package oracle.chehao.api;
+
+import java.io.Closeable;
+
+/**
+ * Created by chehao on 2016/12/19.
+ */
+public interface ICacheManager extends Closeable {
+
+    /**
+     * Return the cache associated with the given name.
+     *
+     * @param name
+     * @return
+     */
+    public ICache getCache(String name);
+
+    public ICache getCache(String name, Integer capacity, Long timeToLive);
+
+    public ICache createNewCache(String name, Integer capacity, Long timeToLive);
+
+    public ICache createNewCache(String name);
+
+    public void init();
+}
