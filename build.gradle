@@ -8,10 +8,18 @@ sourceCompatibility = 1.8
 repositories {
     mavenCentral()
 }
+test{
+    classpath = sourceSets.test.compileClasspath + sourceSets.test.output
+    testLogging{
+        events 'passed', 'skipped', 'failed'
+    }
+}
 
 dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.12'
+//    compile configurations.testNG
     compile group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.0.1'
     compile group: 'org.apache.logging.log4j', name: 'log4j-api', version: '2.0.1'
     compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.4'
+    testCompile group: 'org.testng', name: 'testng', version: '6.11'
+    testCompile group: 'org.jmockit', name: 'jmockit', version: '1.33'
 }

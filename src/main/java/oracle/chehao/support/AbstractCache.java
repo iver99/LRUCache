@@ -18,7 +18,7 @@ import java.util.concurrent.TimeUnit;
 public abstract class AbstractCache implements ICache {
     Logger LOGGER = LogManager.getLogger(AbstractCache.class);
 
-    protected SimpleCacheCounter cacheCounter = new SimpleCacheCounter();
+    public SimpleCacheCounter cacheCounter = new SimpleCacheCounter();
 
     public SimpleCacheCounter getCacheCounter() {
         return cacheCounter;
